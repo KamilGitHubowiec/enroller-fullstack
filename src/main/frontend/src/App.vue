@@ -13,10 +13,10 @@
     <div v-else>
       <button :class="registering && 'button-outline'" @click="registering = false">Loguje się</button>
       <button :class="!registering && 'button-outline'" @click="registering = true">Rejestruje się</button>
-      <!-- <login-form v-if="!registering" @login="login($event)"></login-form> -->
-      <!-- <login-form v-if="registering" @login="register($event)" button-label="Zarejestruj się"></login-form> -->
+      <login-form v-if="!registering" @login="login($event)"></login-form>
+      <login-form v-if="registering" @login="register($event)" button-label="Zarejestruj się"></login-form>
       <div :class="'alert alert-' + (this.isError ? 'error' : 'success')" v-if="message">{{ message }}</div>
-      <login-form @submit="registering ? register($event) : login($event)" :button-label="loginButtonLabel"></login-form>
+      <!-- <login-form @submit="registering ? register($event) : login($event)" :button-label="loginButtonLabel"></login-form> -->
     </div>
   </div>
 </template>
