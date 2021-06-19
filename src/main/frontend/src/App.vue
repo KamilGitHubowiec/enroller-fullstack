@@ -38,6 +38,7 @@
         methods: {
             register(user) {
                 this.clearMessage();
+                console.log(user);
                 this.$http.post('participants', user)
                     .then(() => {
                         this.success('Konto zostało założone. Możesz się zalogować.');
