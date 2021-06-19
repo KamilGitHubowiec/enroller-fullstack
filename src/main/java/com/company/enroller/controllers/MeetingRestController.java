@@ -82,7 +82,7 @@ public class MeetingRestController {
 		return new ResponseEntity<Meeting>(foundMeeting, HttpStatus.OK);
 	}
 	
-    // ADD participant to meeting
+	// ADD participant to meeting
 	@RequestMapping(value = "/{id}/participants", method = RequestMethod.POST)
 	public ResponseEntity<?> addParticipantToMeeting (@PathVariable("id") long id, @RequestBody Participant participant) {
 	    Meeting meeting = meetingService.findById(id);

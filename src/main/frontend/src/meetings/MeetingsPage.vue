@@ -50,6 +50,7 @@
         mounted() {
             this.$http.get("meetings")
               .then(res => {
+                  console.log(res);
                     this.meetings.push(...res.body);
                 });
         }
